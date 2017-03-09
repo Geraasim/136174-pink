@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="page-header__main-menu main-menu">
+      <h1 class="page-header__title">Pink</h1>
+      <span class="page-header__main-nenu-toggle"></span>
+        <ul class="main-menu__items">
+          <li class="main-menu__item"><a href="#"><h1>Pink</h1></a><span class="main-menu__close"><span></li>
+          <li class="main-menu__item main-menu__item--active"><a href="index.html">Главная</a></li>
+          <li class="main-menu__item"><a href="#">Фотографии</a></li>
+          <li class="main-menu__item"><a href="#">Конкурс</a></li>
+          <li class="main-menu__item"><a href="#">Html Academy</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Или тут можно класс сделать form__title ? (если иерархия и вложенности не важны) А у самомго текста тогда - form__title-text ? -->
+      <div class="form-title">
+        <!-- Норм ли такой мелкий блочок? и что делать с h1? на этой странице - конкурс важнее. в хедере теперь ставить h2 для Pink? -->
+        <h1 class="form-title__title">Конкурс на самое безбашенное путешествие с Пинк<h1>
+      </div>
+      <section class="form">
+        <p class="form__lead">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <div class="form__user-block">
+            <label for="surname">Фамилия:</label>
+            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" placeholder="Введите ваше имя *" required>
+            <label for="patronymic">Отчество:</label>
+            <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+          </div>
+          <div class="form__achievements">
+            <h3 class="form__achievements-title">Ваши безбашенные достижения в путешествии</h3>
+            <input type="checkbox" name="achievement" id="selfie" checked>
+            <!--  тут span оставила, чтобы рисовать квадратики и галочки в CSS -->
+            <label for="selfie"><span>Сделал селфи с акулой</span></label>
+            <input type="checkbox" name="achievement" id="beach" checked>
+            <label for="beach"><span>Обгорел на пляже</span></label>
+            <input type="checkbox" name="achievement" id="norris">
+            <label for="norris"><span>Видел Чака Норриса</span></label>
+            <input type="checkbox" name="achievement" id="souvenir">
+            <label for="souvenir"><span>Накупил сувениров</span></label>
+            <input type="checkbox" name="achievement" id="tower" checked>
+            <label for="tower"><span>Удержал башню</span></label>
+            <input type="checkbox" name="achievement" id="smash">
+            <label for="smash"><span>Разгромил отель</span></label>
+          </div>
+          <div class="form__user-info">
+            <label for="tel">Номер телефона:</label>
+            <!-- тут паттерн надо писать, типа такого pattern="[0-9]{1}-[0-9]{3}-[0-9]{3} ?-->
+            <input type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
+            <label for="email">Адрес почты:</label>
+            <input type="email" name="email" id="email" placeholder="Введите почту *" required>
+          </div>
+          <div class="form__apps">
+            <h3 class="form__apps-title">С каким приложением путешествовали?</h3>
+            <input type="radio" name="apps" id="ios" checked>
+            <label for="ios"><span>Pink для iOS</span></label>
+            <input type="radio" name="apps" id="android">
+            <label for="android"><span>Pink на Android</span></label>
+            <input type="radio" name="apps" id="windows">
+            <label for="windows"><span>Windows Phone</span></label>
+          </div>
+          <div class="form__feedback">
+            <h3 class="form__feedback-title">Опишите свои эмоции</h3>
+            <textarea name="feedback" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+          <button class="form__btn" type="submit">Отправить форму</button>
+          <div class="form__note">
+            <!-- тут звездочку надо кодом вставить?-->
+            <span class="form__note-text"><span class="form__note-star">*</span> — обязательные поля</span>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__logo"><a href="#index.html"><img src="#" width="60" height="45" alt="pink"><h2>Pink</h2></a></div>
+      <ul class="page-footer__social-items">
+        <li class="page-footer__social-item page-footer__social-item--twitter"><a href="#"></a></li>
+        <li class="page-footer__social-item page-footer__social-item--facebook"><a href="#"></a></li>
+        <li class="page-footer__social-item page-footer__social-item--youtube"><a href="#"></a></li>
+      </ul>
+      <span class="page-footer__copyright">Разработано <a href="https://htmlacademy.ru"></a></span>
+    </footer>
+    <section class="form__error">
+      <h4 class="form__error-title">Что-то пошло не так!</h4>
+      <p class="form__error-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <!-- норм ли, что у всех трех кнопок на этой странице только один класс? одинаковый? -->
+      <button class="form__btn" type="button">OK</button>
+    </section>
+    <section class="form__submitted">
+      <!-- у двух попапов одинаковые стили, норм ли, что классы разные? не лишнее это? -->
+      <h4 class="form__submitted-title">Ваша заявка отправлена</h4>
+      <p class="form__submitted-text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <button class="form__btn" type="button">Закрыть окно</button>
+    </section>
+  </body>
+</html>
