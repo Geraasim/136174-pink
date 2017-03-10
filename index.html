@@ -6,17 +6,19 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="page-header__main-menu main-menu">
-
-      <h1 class="page-header__title">Pink</h1>
+      <!-- блок именно logo? не развернуто название page-heeader-logo? и именно блок? не элемент? - page-header__logo  -->
+      <div class="logo">
+        <h1 class="logo__title logo__title--header"><a href="index.html">Pink</a></h1>
+      </div>
       <span class="page-header__main-nenu-toggle"></span>
-        <ul class="main-menu__items">
-          <li class="main-menu__item"><a href="#"><h1>Pink</h1></a><span class="main-menu__close"></span></li>
-          <li class="main-menu__item main-menu__item--active"><a href="#">Главная</a></li>
-          <li class="main-menu__item"><a href="photo.html">Фотографии</a></li>
-          <li class="main-menu__item"><a href="#">Конкурс</a></li>
-          <li class="main-menu__item"><a href="https://htmlacademy.ru">Html Academy</a></li>
-
+      <!-- Этот гамбургер/крестик не кпопка ведь? просто спан? Он потом абсолютно прозиционирован будет? -->
+      <!-- такой класс должен быть у тогля? привязан к гл. меню?-->
+      <nav class="page-header__main-menu">
+        <ul class="page-header-main-menu__items">
+          <li class="page-header-main-menu__item main-menu__item--active"><a href="index.html">Главная</a></li>
+          <li class="page-header-main-menu__item"><a href="photo.html">Фотографии</a></li>
+          <li class="page-header-main-menu__item"><a href="#">Конкурс</a></li>
+          <li class="page-header-main-menu__item"><a href="https://htmlacademy.ru">Html Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -34,33 +36,31 @@
           </ul>
           <p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-
       </section>
       <section class="info">
         <div class="info__lead">
-          <p class="info__lead-item">Устали от серости мегаполиса?</p>
-          <p class="info__lead-item">Нам есть, что вам предложить!</p>
+          <h2 class="info__lead-item">Устали от серости мегаполиса?</h2>
+          <h2 class="info__lead-item">Нам есть, что вам предложить!</h2>
         </div>
-        <div class="info__advantage">
-          <div class="info__advantage-item">
-            <h3 class="info__advantage-title">Поднимает настроение</h3>
-            <p class="info__advantage-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </div>
-          <div class="info__advantage-item">
-            <h3 class="info__advantage-title">Меняет мир вокруг</h3>
-            <p class="info__advantage-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </div>
-          <div class="info__advantage-item">
-            <h3 class="info__advantage-title">Заводит новых друзей</h3>
-            <p class="info__advantage-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </div>
-        </div>
-        <div class="info__pic"></div>
       </section>
-
+      <section class="advantage">
+          <div class="advantage__item">
+            <h3 class="advantage__title">Поднимает настроение</h3>
+            <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </div>
+          <div class="advantage__item">
+            <h3 class="advantage__title">Меняет мир вокруг</h3>
+            <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="advantage__item">
+            <h3 class="advantage__title">Заводит новых друзей</h3>
+            <p class="advantage__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+        <div class="advantage__pic"></div>
+      </section>
       <section class="review">
         <article class="review__item">
-          <h3 class="review__title">Николай Петров</h3>
+          <h1 class="review__title">Николай Петров</h1>
           <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           <div class="review__paginator">
             <span class="review__paginator-slide review__paginator-slide--active"></span>
@@ -68,14 +68,10 @@
             <span class="review__paginator-slide"></span>
           </div>
         </article>
-
       </section>
-
-
       <section class="price">
         <div class="price__item">
           <div class="price__item-lead">
-            <div class="price__item-flag price__item-flag--hit">Хит</div>
             <span class="price__item-title">Стандарт</span>
             <span class="price__item-price">3.99 USD</span>
           </div>
@@ -84,21 +80,18 @@
             <li class="price__parameter">Смайлики <span class="price__parameter-checked price__parameter-checked--yes"></span></li>
             <li class="price__parameter">Комментарии <span class="price__parameter-checked price__parameter-checked--no"></span></li>
           </ul>
-
         </div>
       </section>
-
       <section class="contacts">
-        <p class="contacts__lead">Остались вопросы?<br>Свяжитесь с нами!</p>
+        <h2 class="contacts__lead">Остались вопросы? Свяжитесь с нами!</h2>
         <div class="contacts__info">
-
           <div class="contacts__phone">
             <span class="contacts__title">Звоните:</span>
-            <span class="contacts__text">+7 (812) 555-66-66</span>
+            <span class="contacts__text"><a href="tel:+78125556666">+7 (812) 555-66-66</a></span>
           </div>
           <div class="contacts__mail">
             <span class="contacts__title">Пишите:</span>
-            <span class="contacts__text">mail@htmlacademy.ru</span>
+            <span class="contacts__text"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></span>
           </div>
           <div class="contacts__adress">
             <span class="contacts__title">Приезжайте в гости:</span>
@@ -109,10 +102,14 @@
       <section class="map">
         <iframe src="#" style="border:0" allowfullscreen=""></iframe>
       </section>
-
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo"><a href="#index.html"><img src="#" width="60" height="45" alt="pink"><h2>Pink</h2></a></div>
+      <!-- <div class="page-footer__logo"><a href="index.html"><img src="#" width="60" height="45" alt="pink"><h2>Pink</h2></a></div> -->
+      <div class="logo">
+      <!-- or <div class="page-footer__logo"> -->
+        <div class="logo__title logo__title--footer"><a href="index.html"><img src="#" width="60" height="45" alt="pink"><h2>Pink</h2></a></div>
+      <!-- так лучше обозначить лого в футере? -->
+      </div>
       <ul class="page-footer__social-items">
         <li class="page-footer__social-item page-footer__social-item--twitter"><a href="#"></a></li>
         <li class="page-footer__social-item page-footer__social-item--facebook"><a href="#"></a></li>
@@ -120,8 +117,5 @@
       </ul>
       <span class="page-footer__copyright">Разработано <a href="https://htmlacademy.ru"></a></span>
     </footer>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
   </body>
 </html>
