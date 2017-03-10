@@ -6,15 +6,17 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="page-header__main-menu main-menu">
-      <h1 class="page-header__title">Pink</h1>
+      <div class="logo">
+        <!--  h2? -->
+        <h2 class="logo__title logo__title--header"><a href="index.html">Pink</a></h2>
+      </div>
       <span class="page-header__main-nenu-toggle"></span>
-        <ul class="main-menu__items">
-          <li class="main-menu__item"><a href="#"><h1>Pink</h1></a><span class="main-menu__close"><span></li>
-          <li class="main-menu__item main-menu__item--active"><a href="index.html">Главная</a></li>
-          <li class="main-menu__item"><a href="#">Фотографии</a></li>
-          <li class="main-menu__item"><a href="#">Конкурс</a></li>
-          <li class="main-menu__item"><a href="#">Html Academy</a></li>
+      <nav class="page-header__main-menu">
+        <ul class="page-header-main-menu__items">
+          <li class="page-header-main-menu__item main-menu__item--active"><a href="index.html">Главная</a></li>
+          <li class="page-header-main-menu__item"><a href="photo.html">Фотографии</a></li>
+          <li class="page-header-main-menu__item"><a href="#">Конкурс</a></li>
+          <li class="page-header-main-menu__item"><a href="https://htmlacademy.ru">Html Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -22,10 +24,11 @@
       <!-- Или тут можно класс сделать form__title ? (если иерархия и вложенности не важны) А у самомго текста тогда - form__title-text ? -->
       <div class="form-title">
         <!-- Норм ли такой мелкий блочок? и что делать с h1? на этой странице - конкурс важнее. в хедере теперь ставить h2 для Pink? -->
-        <h1 class="form-title__title">Конкурс на самое безбашенное путешествие с Пинк<h1>
+        <h1 class="form-title__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
       <section class="form">
-        <p class="form__lead">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <!-- h3? -->
+        <h3 class="form__lead">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h3>
         <form action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__user-block">
             <label for="surname">Фамилия:</label>
@@ -36,7 +39,8 @@
             <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
           </div>
           <div class="form__achievements">
-            <h3 class="form__achievements-title">Ваши безбашенные достижения в путешествии</h3>
+            <!-- h4? -->
+            <h4 class="form__achievements-title">Ваши безбашенные достижения в путешествии</h4>
             <input type="checkbox" name="achievement" id="selfie" checked>
             <!--  тут span оставила, чтобы рисовать квадратики и галочки в CSS -->
             <label for="selfie"><span>Сделал селфи с акулой</span></label>
@@ -59,7 +63,8 @@
             <input type="email" name="email" id="email" placeholder="Введите почту *" required>
           </div>
           <div class="form__apps">
-            <h3 class="form__apps-title">С каким приложением путешествовали?</h3>
+            <!-- h4? -->
+            <h4 class="form__apps-title">С каким приложением путешествовали?</h4>
             <input type="radio" name="apps" id="ios" checked>
             <label for="ios"><span>Pink для iOS</span></label>
             <input type="radio" name="apps" id="android">
@@ -68,7 +73,8 @@
             <label for="windows"><span>Windows Phone</span></label>
           </div>
           <div class="form__feedback">
-            <h3 class="form__feedback-title">Опишите свои эмоции</h3>
+            <!-- h4? -->
+            <h4 class="form__feedback-title">Опишите свои эмоции</h4>
             <textarea name="feedback" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </div>
           <button class="form__btn" type="submit">Отправить форму</button>
@@ -80,7 +86,9 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo"><a href="#index.html"><img src="#" width="60" height="45" alt="pink"><h2>Pink</h2></a></div>
+      <div class="logo">
+        <div class="logo__title logo__title--footer"><a href="index.html"><img src="#" width="60" height="45" alt="pink"><h2>Pink</h2></a></div>
+      </div>
       <ul class="page-footer__social-items">
         <li class="page-footer__social-item page-footer__social-item--twitter"><a href="#"></a></li>
         <li class="page-footer__social-item page-footer__social-item--facebook"><a href="#"></a></li>
@@ -89,14 +97,16 @@
       <span class="page-footer__copyright">Разработано <a href="https://htmlacademy.ru"></a></span>
     </footer>
     <section class="form__error">
-      <h4 class="form__error-title">Что-то пошло не так!</h4>
+      <!-- h5? -->
+      <h5 class="form__error-title">Что-то пошло не так!</h5>
       <p class="form__error-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <!-- норм ли, что у всех трех кнопок на этой странице только один класс? одинаковый? -->
       <button class="form__btn" type="button">OK</button>
     </section>
     <section class="form__submitted">
       <!-- у двух попапов одинаковые стили, норм ли, что классы разные? не лишнее это? -->
-      <h4 class="form__submitted-title">Ваша заявка отправлена</h4>
+      <!-- h5? -->
+      <h5 class="form__submitted-title">Ваша заявка отправлена</h5>
       <p class="form__submitted-text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
       <button class="form__btn" type="button">Закрыть окно</button>
     </section>
